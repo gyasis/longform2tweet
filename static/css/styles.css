@@ -1,0 +1,36 @@
+.card {
+    background-color: #333;
+    border: none;
+    border-radius: 20px;
+}
+
+.card.copied {
+    background-color: #2a2525;
+}
+
+.form-control {
+    border: none;
+}
+
+.btn {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    background-color: #0c7feb
+}
+
+.img-fluid {
+    max-width: 64px;
+    height: auto;
+}
+
+.textarea-black {
+    background-color: #000000;
+    color: #ffffff;
+    border-radius: 10px;
+}
+
+.btn-submit {
+    background-color: #000000;
+    color: #ffffff;
+    border-radius: 10px;
+}

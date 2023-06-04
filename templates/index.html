@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html data-bs-theme="dark">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+            
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+
+        <title>longform2tweet</title>
+    </head>
+    <body>
+        <div class="container">
+            <h1>longform2tweet</h1>
+            <form method="POST" id="myForm">
+                <div class="form-group">
+                    <label for="threadTitle">Thread Title (Optional, included in each tweet):</label>
+                    <input type="text" class="form-control" id="threadTitle" name="thread_title">
+                    <small class="form-text text-muted">If you need a unique title for the first tweet, add it to the beginning of your long form text.</small>
+                </div>
+                <div class="form-group">
+                    <label for="textArea">Paste your long form text here:</label>
+                    <textarea class="form-control" id="textArea" name="text" rows="10"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="hashtag">Hashtag (Optional, added to the end of each tweet):</label>
+                    <input type="text" class="form-control" id="hashtag" name="hashtag">
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+            <hr>
+            {% for tweet, char_count in split_texts %}
+                <div class="card mb-3" id="tweet-{{ loop.index }}" style="cursor: pointer;" onclick="copyToClipboard(this.id)">
+                    <div class="card-body">
+                        <div class="row">
+                            <!-- Profile Picture Column -->
+                            <div class="col-md-1">
+                                <img src="twitter_icon_url" class="img-fluid rounded-circle" alt="Twitter Icon">
+                            </div>
+                            <!-- Tweet Content Column -->
+                            <div class="col-md-11">
+                                <h5 class="mt-0">Username <small class="text-muted">{{ date_time }}</small></h5>
+                                <p id="tweet-content-{{ loop.index }}">{{tweet|safe}}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer text-muted">
+                        Characters: {{char_count}}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        
+                <!-- Script to copy text to clipboard -->
+                <script>
+                    function copyToClipboard(id) {
+                        var from = document.getElementById("tweet-content-" + id.split('-')[1]);
+                        var textToCopy = from.textContent;
+                        navigator.clipboard.writeText(textToCopy);
+                        document.getElementById(id).classList.add("copied"); // Add copied class after copying
+                    }
+                </script>
+            </body>
+        </html>
+        

@@ -1,0 +1,85 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/home/gyasis/.nvm/v0.10.20/bin/node',
+1 verbose cli   '/home/gyasis/.nvm/v0.10.20/bin/npm',
+1 verbose cli   'i',
+1 verbose cli   'libnpx' ]
+2 info using npm@1.3.11
+3 info using node@v0.10.20
+4 warn package.json @ No description
+5 warn package.json @ No repository field.
+6 warn package.json @ No README data
+7 warn package.json apollo-utilities@1.3.4 No README data
+8 warn package.json copy-descriptor@0.1.1 No README data
+9 warn package.json get-value@2.0.6 No README data
+10 warn package.json object-copy@0.1.0 No README data
+11 warn package.json path-is-inside@1.0.2 No README data
+12 warn package.json raven@2.6.3 No README data
+13 warn package.json setimmediate@1.0.5 No README data
+14 warn package.json static-extend@0.1.2 No README data
+15 warn package.json tr46@0.0.3 No README data
+16 warn package.json watchpack-chokidar2@2.0.1 No description
+17 warn package.json watchpack-chokidar2@2.0.1 No README data
+18 warn package.json zen-observable-ts@0.8.21 No README data
+19 warn package.json callsite@1.0.0 No repository field.
+20 warn package.json join-component@1.1.0 No repository field.
+21 warn package.json minipass-collect@1.0.2 No repository field.
+22 warn package.json minipass-pipeline@1.2.4 No repository field.
+23 warn package.json require-from-string@2.0.2 keywords should be an array of strings
+24 verbose readDependencies using package.json deps
+25 verbose cache add [ 'libnpx', null ]
+26 verbose cache add name=undefined spec="libnpx" args=["libnpx",null]
+27 verbose parsed url { protocol: null,
+27 verbose parsed url   slashes: null,
+27 verbose parsed url   auth: null,
+27 verbose parsed url   host: null,
+27 verbose parsed url   port: null,
+27 verbose parsed url   hostname: null,
+27 verbose parsed url   hash: null,
+27 verbose parsed url   search: null,
+27 verbose parsed url   query: null,
+27 verbose parsed url   pathname: 'libnpx',
+27 verbose parsed url   path: 'libnpx',
+27 verbose parsed url   href: 'libnpx' }
+28 silly lockFile 286b4d31-libnpx libnpx
+29 verbose lock libnpx /home/gyasis/.npm/286b4d31-libnpx.lock
+30 silly lockFile 286b4d31-libnpx libnpx
+31 silly lockFile 286b4d31-libnpx libnpx
+32 verbose addNamed [ 'libnpx', '' ]
+33 verbose addNamed [ null, '*' ]
+34 silly lockFile 8bf2ba40-libnpx libnpx@
+35 verbose lock libnpx@ /home/gyasis/.npm/8bf2ba40-libnpx.lock
+36 silly addNameRange { name: 'libnpx', range: '*', hasData: false }
+37 verbose url raw libnpx
+38 verbose url resolving [ 'https://registry.npmjs.org/', './libnpx' ]
+39 verbose url resolved https://registry.npmjs.org/libnpx
+40 info trying registry request attempt 1 at 10:56:43
+41 http GET https://registry.npmjs.org/libnpx
+42 info retry will retry, error on last attempt: Error: CERT_UNTRUSTED
+43 info trying registry request attempt 2 at 10:56:53
+44 http GET https://registry.npmjs.org/libnpx
+45 info retry will retry, error on last attempt: Error: CERT_UNTRUSTED
+46 info trying registry request attempt 3 at 10:57:53
+47 http GET https://registry.npmjs.org/libnpx
+48 silly lockFile 8bf2ba40-libnpx libnpx@
+49 silly lockFile 8bf2ba40-libnpx libnpx@
+50 error Error: CERT_UNTRUSTED
+50 error     at SecurePair.<anonymous> (tls.js:1356:32)
+50 error     at SecurePair.EventEmitter.emit (events.js:92:17)
+50 error     at SecurePair.maybeInitFinished (tls.js:968:10)
+50 error     at CleartextStream.read [as _read] (tls.js:462:15)
+50 error     at CleartextStream.Readable.read (_stream_readable.js:320:10)
+50 error     at EncryptedStream.write [as _write] (tls.js:366:25)
+50 error     at doWrite (_stream_writable.js:221:10)
+50 error     at writeOrBuffer (_stream_writable.js:211:5)
+50 error     at EncryptedStream.Writable.write (_stream_writable.js:180:11)
+50 error     at write (_stream_readable.js:583:24)
+51 error If you need help, you may report this log at:
+51 error     <http://github.com/isaacs/npm/issues>
+51 error or email it to:
+51 error     <npm-@googlegroups.com>
+52 error System Linux 5.15.0-67-generic
+53 error command "/home/gyasis/.nvm/v0.10.20/bin/node" "/home/gyasis/.nvm/v0.10.20/bin/npm" "i" "libnpx"
+54 error cwd /media/gyasis/Blade 15 SSD/Users/gyasi/Google Drive (not syncing)/Collection/longform2tweet
+55 error node -v v0.10.20
+56 error npm -v 1.3.11
+57 verbose exit [ 1, true ]
